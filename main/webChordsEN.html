@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <link rel="icon" type="image/x-icon" href="https://previews.123rf.com/images/123vector/123vector2004/123vector200400011/144489655-vector-illustration-of-classical-guitar-isolated-design.jpg">
+    <link rel="stylesheet" href="../styles/webChords.css">
+    <script src="../scripts/requests.js"></script>
+    <script src="../scripts/navigation.js"></script>
+    <title>Web Chords</title>
+</head>
+<body onload="showHomePage()">
+    <section id="topLine">
+        <span id="navbtn" onclick="openNav()">Navigation</span>
+        <span id="languageOption">
+            <span class="languages">EN</span>
+            <label class="switch">
+                <input type="checkbox" id="toggle" onclick="changeLanguage()">
+                <span class="slider round"></span>
+            </label>
+            <span class="languages">BG</span>
+        </span>
+    </section>
+    <header> 
+        <h1>&#127926;Web Chords&#127926;</h1>
+    </header>
+
+    <nav id="navID">
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="showHomePage()">Home</button>
+        <button onclick="showAboutPage()">About</button>
+        <button onclick="showRegisterForm()">Register</button>
+        <button onclick="showLoginForm()">Login</button>
+    </nav>
+
+    <section id="main">
+        <section id="home">
+            <h2> Welcome to Web Chords! </h2> 
+            <div class="guitarimage">
+                <img src="https://img.freepik.com/free-vector/acoustic-guitar-isolated-white-background_1308-113839.jpg?w=2000" alt="Guitar image"/>   
+                <a href="https://img.freepik.com/free-vector/acoustic-guitar-isolated-white-background_1308-113839.jpg?w=2000" target="_blank"> img.freepik.com </a>
+            </div>
+            <p> Hello! This is a site about musical chords represented by ASCII symbols. This rendering 
+                method allows easy visualization of entire tracks, so that their learning becomes as 
+                smooth and enjoyable as possible. The functionalities that this site supports are,
+                user registration and login to the system, uploading and viewing chord files,
+                as well as access to a library of songs from which the user can choose.
+                A preview of guitar chords is currently available.</p>
+        </section>
+        <section id="about">
+            <h2> Who are we: </h2>
+            <section class="column">
+                <p>Doni Ivanov, 4th year, Computer science</p>
+                <img src="https://avatars.githubusercontent.com/u/21335672?s=400&u=769df9fe12895fc96b9dbab9289c981e57561e31&v=4" class="avatars">
+                <a href="https://github.com/donivanev">https://github.com/donivanev</a>
+            </section>
+            <section class="column">
+                <p>Zornitsa Gavrailova, 4th year, Computer science</p>
+                <img src="https://avatars.githubusercontent.com/u/65349868?v=4" class="avatars">
+                <a href="https://github.com/zorimotori">https://github.com/zorimotori</a>
+            </section>
+        </section>
+        <form onsubmit="register(event)" id="register-form">
+            <label>Username</label>
+            <input type="text" name="username">
+            <label>Name</label>
+            <input type="text" name="name">
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <input type="submit" value="Register" id="submit">
+        </form>
+        <form onsubmit="login(event)" id="login-form">
+            <label>Username</label>
+            <input type="text" name="username">
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <input type="submit" value="Login" id="submit">
+        </form>
+    </section>
+</body>
+</html>

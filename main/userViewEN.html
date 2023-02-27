@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <link rel="icon" type="image/x-icon" href="https://previews.123rf.com/images/123vector/123vector2004/123vector200400011/144489655-vector-illustration-of-classical-guitar-isolated-design.jpg">
+    <link rel="stylesheet" href="../styles/webChords.css">
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/requests.js"></script>
+    <title>Web Chords</title>
+</head>
+<body onload="showUserPage()">
+    <section id="topLine">
+        <span id="navbtn" onclick="openNav()">Navigation</span>
+    </section>
+    <header> 
+        <h1>&#127926;Web Chords&#127926;</h1>
+    </header>
+
+    <nav id="navID">
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <button onclick="showUserPage()">Home</button>
+        <button onclick="showAboutPage()">About</button>
+        <button onclick="showMusicPage()">Music &#127928;</button>
+        <button onclick="showSongsPage()">Songs &#127932;</button>
+        <button onclick="logout()">Logout</button>
+    </nav>
+    <section id="main">
+        <section id="welcome">
+            <h2></h2>
+        </section>
+
+        <section id="about">
+            <h2> Who are we: </h2>
+            <section class="column">
+                <p>Doni Ivanov, 4th year, Computer science</p>
+                <img src="https://avatars.githubusercontent.com/u/21335672?s=400&u=769df9fe12895fc96b9dbab9289c981e57561e31&v=4" class="avatars">
+                <a href="https://github.com/donivanev">https://github.com/donivanev</a>
+            </section>
+            <section class="column">
+                <p>Zornitsa Gavrailova, 4th year, Computer science</p>
+                <img src="https://avatars.githubusercontent.com/u/65349868?v=4" class="avatars">
+                <a href="https://github.com/zorimotori">https://github.com/zorimotori</a>
+            </section>
+        </section>
+        <section id="music">
+            <section id="upload-tabs">
+                <form id="file" method="POST" action="./fileUpload.php" enctype="multipart/form-data" target="tablature-music">
+                    <input type="file" name="file" id="uploaded-file"/>
+                    <input type="submit" value="Upload file" onclick="sendFile()" id="submitJson"/>
+                </form>
+                <iframe name="tablature-music" id="tablature-music" style="display:none;"></iframe>
+            </section>
+            <audio controls id="audio" style="display:none">
+                <source type="audio/mpeg" id="audio-file"></source>
+            </audio>
+            <video controls id="video" style="display:none">
+                <source type="video/mp4" id="video-file"></source>
+            </video>
+        </section>
+        <section id="songs">
+            <h2>You can look at our song collection here:</h2>
+            <button onclick="getSongs()">Look</button>
+            <form id="songs-form" method="POST" action="./fileUpload.php" target="tablature-songs">
+                
+            </form>
+        </section>
+        <iframe name="tablature-songs" id="tablature-songs" style="display:none;"></iframe>
+    </section>
+</body>
+</html>

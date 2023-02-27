@@ -1,0 +1,288 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #E8E2E2;
+}
+
+#topLine {
+    display: block;
+    background-color: #5D3891;
+    margin: 0px;
+    padding: 5px 20px 40px 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#navbtn {
+    float: left;
+    background-color:#5D3891;
+    padding-right: 20px; 
+    color:#F5F5F5;
+    font-size: 20px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    border: 3px solid #5D3891; 
+    transition-duration: 0.4s;
+}
+
+#navbtn:hover {
+    color: #F99417;
+}
+
+#languageOption {
+    float: right;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#F5F5F5;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:#F99417;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color:#F5F5F5;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.languages {
+    padding: 0px 5px;
+    font-size: 20px;
+    color:#F5F5F5;
+}
+
+header {
+    background-image: url(https://www.shutterstock.com/image-vector/musical-note-icons-vector-illustration-260nw-2145567311.jpg);
+    text-align: center;
+    border-bottom: 2px solid #5D3891;
+}
+
+h1 {
+    display: inline-block;
+    -webkit-text-stroke: 3px #111;
+    border-style: outset;
+    border-width: 5px;
+    color: #F99417;
+    font-weight:bold;
+    font-size: 70px;
+}
+
+nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#5D3891;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+nav button {
+    font-size: 20px;
+    width: 80%;
+    padding: 10px;
+    margin: 25px;
+    border: 3px solid #F99417;
+    border-radius: 8px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    display: block;
+    color:#5D3891; 
+    transition-duration: 0.4s;
+}
+
+nav button:hover {
+    background-color: #F99417;
+    color:#F5F5F5;
+}
+
+nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;  
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;  
+    color:#F99417;
+}
+
+#main {
+    margin: 0;
+}
+
+#home {
+    margin: 50px 150px 50px 150px;
+}
+
+.guitarimage {
+    display: inline;
+    float: right;
+    margin: 0 0 30px 35px;
+}
+
+.guitarimage a {
+    display: block;
+}
+
+img {
+    width: 150px;
+}
+
+.avatars {
+    border-radius: 50%;
+}
+
+form {
+    display: block;
+    margin: 50px;
+    color: #5D3891;
+}
+
+input {
+    display: block;
+    margin: 15px;
+    width: 80%;
+    border: 2px solid #5D3891;
+}
+
+input:hover {
+    border: 2px solid #F99417;
+}
+
+#submit {
+    margin: 15px auto 15px auto;
+    width: 80%;
+    height: 40px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    transition-duration: 0.4s;
+    background-color: #5D3891;
+    color: #F5F5F5;
+}
+
+#submit:hover {
+    background-color: #F99417;
+    border: 2px solid #F99417;
+}
+
+
+#about, #login-form, #register-form, #welcome, #music-chords {
+    display: none;
+}
+
+section {
+    margin: 50px;
+}
+
+.column {
+    display: inline;
+    width: 40%;
+}
+
+.column a {
+    display: block;
+    margin: 5px;
+}
+
+iframe {
+    height: 250px;
+    width: 820px;
+    border: 2px solid #5D3891;
+    margin-left: 30px;
+}
+
+#submitJson {
+    width: 81%;
+    height: 40px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    transition-duration: 0.4s;
+    background-color: #5D3891;
+    color: #F5F5F5;
+}
+
+#submitJson:hover {
+    background-color: #F99417;
+    border: 2px solid #F99417;
+}
+
+audio {
+    float: left;
+    margin-left: 120px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color:#F5F5F5;
+}
+
+#upload-tabs {
+    display: inline-block;
+}
+
+#upload-tabs form {
+    display: inline-block;
+}
+
+video {
+    width: 820px;
+}
+
+#songs button {
+    width: 40%;
+    height: 40px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    transition-duration: 0.4s;
+    background-color: #5D3891;
+    color: #F5F5F5;
+}
+
+#songs button:hover {
+    background-color: #F99417;
+    border: 2px solid #F99417;  
+}
+
+#tablature-songs {
+    margin-top: 50px;
+}
